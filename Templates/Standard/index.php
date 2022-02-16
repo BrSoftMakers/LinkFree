@@ -1,5 +1,6 @@
-<?php require("../bootstrap.php"); ?>
+<?php require("bootstrap.php"); ?>
 <?php $jobs = runQuery("SELECT * FROM jobs WHERE deleted_at IS NULL;"); ?>
+<?php $links = runQuery("SELECT * FROM linkfree_links WHERE deleted_at IS NULL;"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -22,9 +23,15 @@
         </div>
     <?php } ?>        
 
+    <?php foreach($links as $link) { ?>
+        <div id="links">
+            <a class="link" href="<?= $link["url"]; ?>" target="_blank"><?= $link["title"]; ?></a>
+        </div>
+    <?php } ?>        
+
     <!-- Javascript -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script  src="index.js"></script>
+    <script  src="main.js"></script>
     <?= GOOGLE_ANALYTICS_TAG ?>
 </body>
 </html>
