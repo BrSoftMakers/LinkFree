@@ -4,10 +4,10 @@ define("SOFTMAKERS_SITE_URL", "https://www.softmakers.com.br/");
 define("REDIRECT_URL_ONFAIL", SOFTMAKERS_SITE_URL."jobs");
 
 # MySQL database attrs to connect
-define("DATABASE_HOST", "softmakers.com.br");
-define("DATABASE_USERNAME", "softma15_root");
-define("DATABASE_PASSWORD", "0M8e,=i#cZ_I");
-define("DATABASE_NAME", "softma15_blog_softmakers");
+define("DATABASE_HOST", "localhost");
+define("DATABASE_USERNAME", "root");
+define("DATABASE_PASSWORD", "123456");
+define("DATABASE_NAME", "softmakers");
 
 # Site metatags and Google Analytics Tag
 define("SITE_TITLE", "SoftMakers - Construir a sua ideia é nosso negócio");
